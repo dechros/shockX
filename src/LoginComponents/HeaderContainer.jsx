@@ -14,3 +14,26 @@ const HeaderContainer = () => {
 
 export default HeaderContainer;
 
+const styles = StyleSheet.create({
+  HeaderContainer: {
+    flex: 1,
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "flex-end",
+    padding: 20,
+  },
+  logoImage: {
+    height: "50%",
+    aspectRatio: 1,
+  },
+  logoText: {
+    fontFamily: fontTypes.normal,
+    fontSize: fontSizes.loginHeader,
+    color: colors.textLight,
+  },
+  subText: {
+    fontFamily: fontTypes.normal,
+    fontSize: fontSizes.normal,
+    color: colors.textLight,
+  },
+});
