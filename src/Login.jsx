@@ -1,34 +1,31 @@
-import React from "react";
-import { Text, TextInput, TouchableOpacity, View, StyleSheet } from "react-native";
-import { colors, fontSizes, fontTypes, elementHeights } from "./Theme"
-import LogoContainer from "./LoginComponents/LogoContainer";
+import React, { useRef, useEffect } from "react";
+import { Animated } from "react-native";
+import HeaderContainer from "./LoginComponents/HeaderContainer";
 import FormContainer from "./LoginComponents/FormContainer";
 
 const Login = ({ pageStyle }) => {
-  console.log(pageStyle);
+  const translateY = useRef(new Animated.Value(500)).current;
+
+  useEffect(() => {
+    Animated.parallel([
+      Animated.timing(translateY, {
+        toValue: 0,
+        duration: 1000,
+        useNativeDriver: true
+      })
+    ]).start();
+  }, [translateY]);
+
   return (
     <>
-      <View style={{ flex: 3, borderWidth: 1, borderColor: 'blue', alignItems: "center"}}>
-        <LogoContainer />
-      </View>
-      <View style={{ flex: 2, borderWidth: 1, borderColor: 'blue', alignItems: "center"}}>
+      <Animated.View style={[{ flex: 4 }, { transform: [{ translateY: translateY }] }]}>
+        <HeaderContainer />
+      </Animated.View>
+      <Animated.View style={[{ flex: 3 }, { transform: [{ translateY: translateY }] }]}>
         <FormContainer />
-      </View>
-      <View style={styles.footerContainer}>
-
-      </View>
+      </Animated.View>
     </>
   );
 };
-
-const styles = StyleSheet.create({
-  footerContainer: {
-    flex: 1,
-    alignItems: "center",
-    borderWidth: 1,
-    borderColor: 'yellow',
-  },
-});
-
 
 export default Login;

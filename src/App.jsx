@@ -9,7 +9,7 @@ const App = () => {
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <LinearGradient colors={[colors.backgroundDark, colors.backgroundLight]} style={{ flex: 1 }}>
+      <LinearGradient colors={[colors.primaryDark, colors.primaryLight]} style={{ flex: 1 }}>
         <StatusBar barStyle={colorScheme} backgroundColor="transparent" translucent />
         <Login pageStyle={colorScheme} />
       </LinearGradient>

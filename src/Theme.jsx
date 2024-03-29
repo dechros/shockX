@@ -1,8 +1,10 @@
 export const colors = {
-  backgroundLight: "#C4AAF4",
-  backgroundDark: "#9672D6",
-  textLight: "#ffffff",
-  textDark: "#333333",
+  primaryLight: "#C4AAF4",
+  primaryDark: "#9672D6",
+  secondaryDark: "#EEEDF3",
+  secondaryLight: "#FEFEFE",
+  textLight: "#FEFEFE",
+  textDark: "#727271",
 };
 
 export const fontSizes = {
@@ -18,5 +20,5 @@ export const fontTypes = {
 
 export const elementHeights = {
   button: 60,
-  textbox: 50
+  textbox: 60
 };
