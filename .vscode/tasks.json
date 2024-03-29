@@ -1,0 +1,74 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Launch Android Emulator and React Native Project",
+            "dependsOrder": "parallel",
+            "dependsOn": [
+                "Start Android Emulator",
+                "Launch React Native Project",
+                "Start React Native Server"
+            ]
+        },
+        {
+            "label": "Start Android Emulator",
+            "type": "shell",
+            "command": "C:\\Users\\halit\\AppData\\Local\\Android\\Sdk\\emulator\\emulator",
+            "args": [
+                "-avd",
+                "Pixel_7_API_34"
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Launch React Native Project",
+            "type": "shell",
+            "command": "npx",
+            "args": [
+                "react-native",
+                "run-android"
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Start React Native Server",
+            "type": "shell",
+            "command": "npx",
+            "args": [
+                "react-native",
+                "start"
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
