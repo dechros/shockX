@@ -1,4 +1,9 @@
 {
-  "name": "shockX",
-  "displayName": "shockX"
+  "expo": {
+    "name": "shockX",
+    "displayName": "shockX",
+    "plugins": [
+      "expo-font"
+    ]
+  }
 }
