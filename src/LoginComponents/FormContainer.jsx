@@ -6,20 +6,18 @@ const FormContainer = () => {
   return (
     <View style={styles.formContainer}>
       <TextInput style={styles.input} placeholder="Username" placeholderTextColor={colors.textDark} />
-      <View style={styles.rectangle}></View>
+      <View style={styles.rectangle} />
       <TextInput style={[styles.input, { marginTop: 10 }]} placeholder="Password" placeholderTextColor={colors.textDark} secureTextEntry={true} />
-      <View style={styles.rectangle}></View>
-      <TouchableOpacity style={styles.loginButton}>
+      <View style={styles.rectangle} />
+      <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.link}>
-        <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
+        <Text style={styles.linkText}>Forgot Password?</Text>
       </TouchableOpacity>
-      <View style={styles.footerContainer}>
-        <TouchableOpacity style={styles.link}>
-          <Text style={styles.registerText}>New Here? Register</Text>
-        </TouchableOpacity>
-      </View>
+      <TouchableOpacity style={styles.link}>
+        <Text style={styles.linkText}>New Here? Register</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -49,7 +47,7 @@ const styles = StyleSheet.create({
     height: 1,
     backgroundColor: colors.primaryDark,
   },
-  loginButton: {
+  button: {
     width: "100%",
     height: elementHeights.button,
     backgroundColor: colors.primaryDark,
@@ -65,24 +63,9 @@ const styles = StyleSheet.create({
     color: colors.textLight,
   },
   link: {
-    padding: 10,
+    paddingTop: 20,
   },
-  forgotPasswordText: {
-    fontFamily: fontTypes.normal,
-    fontSize: fontSizes.normal,
-    color: colors.textDark,
-  },
-  footerContainer: {
-    flex: 1,
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "flex-end",
-    backgroundColor: colors.secondaryLight,
-  },
-  link: {
-    padding: 10,
-  },
-  registerText: {
+  linkText: {
     fontFamily: fontTypes.normal,
     fontSize: fontSizes.normal,
     color: colors.textDark,
